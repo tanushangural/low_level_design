@@ -1,0 +1,25 @@
+1. Library consists of many books and each books hash its own attributes: name, authorName, publicationDate.
+2. A Book can have multiple copies and each copy has a unique ID.
+3. Everyone should be able to search on basis of bookName, authorName and find out if there are available copies.
+4. There are two types of users: Member and Librarian.
+5. Librarians should be able to issue book copies to Members.
+6. Librarians should be able to submit copies from members.
+7. A Member should be allowed to keep a book copy for max 30days beyond which a fine shall be charged on per day basis.
+8. Librarians should be able to add/remove books copies from library.
+9. LIbrarians should be able to mark member as blocked.
+10. Librarians should be able to do status check for a book copy (who issued?) and check the book copy issued by a particular member.
+
+High Level APIS:
+1. searchBookByName(bookName): List<Book>
+2. searchBookByAuthor(authorName): List<Book>
+3. checkAvailability(bookId): boolean
+4. issueBookCopy(bookId, memberId): BookCopy
+5. submitBookCopy(bookCopyId, memberId): void
+6. addBookCopy(bookDetails): void
+7. removeBookCopy(bookCopyId): void
+8. statusCheckofBookCopyIssued(bookCopyId): IssueStatus
+
+9. searchMemberById(memberId): Member
+10. blockMember(memberId): void
+11. getIssuedBooksByMember(memberId): List<BookCopy>
+12.

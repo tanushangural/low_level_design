@@ -4,13 +4,13 @@ import java.util.Date;
 import java.util.List;
 
 public class BookDetails {
-    private final String bookName;
-    private final Date publicationDate;
-    private final List<String> authorNames;
+    private String bookName;
+    private List<String> authorsName;
+    private Date publicationDate;
 
-    public BookDetails(String bookName, Date publicationDate, List<String> authorNames) {
+    public BookDetails(String bookName, List<String> authorsName, Date publicationDate) {
+        this.authorsName = authorsName;
         this.bookName = bookName;
-        this.publicationDate = publicationDate;
-        this.authorNames = authorNames;
+        this.authorsName = authorsName;
     }
 }

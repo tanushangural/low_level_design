@@ -1,12 +1,15 @@
 package LibraryManagementSystem.book;
 
 public class BookCopy {
+    private String id;
 
+    //prefer composition over inheritence for bookdetails
     private final BookDetails bookDetails;
-    private final Integer bookId;
 
-    public BookCopy(BookDetails bookDetails, Integer bookId) {
+
+    public BookCopy(BookDetails bookDetails, String id) {
         this.bookDetails = bookDetails;
-        this.bookId = bookId;
+        this.id = id;
     }
+
 }
