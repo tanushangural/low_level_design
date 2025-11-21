@@ -50,3 +50,4 @@ public class User {
 // Scenarios when to use Builder pattern
 //1. Optional agrs
 //2. to maintain immutiablity
+//3. using chaning for make more intuative and less line of code needs to write
