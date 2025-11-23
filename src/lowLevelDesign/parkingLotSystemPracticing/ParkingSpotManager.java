@@ -36,7 +36,7 @@ public class ParkingSpotManager {
             if(parkingSpot == null) {
                 throw new RuntimeException("No SpotFound");
             }
-            parkingSpot.setAvl(true);
+            parkingSpot.setAvl(false);
             parkingSpot.setVehicle(vehicle);
             ParkingSpotInMemory.updateParkingSpot(parkingSpot);
             return parkingSpot;
@@ -45,7 +45,7 @@ public class ParkingSpotManager {
 
     public void deAllocateParkingSpot(ParkingSpot parkingSpot) {
         synchronized (lock) {
-            parkingSpot.setAvl(false);
+            parkingSpot.setAvl(true);
             parkingSpot.setVehicle(null);
             ParkingSpotInMemory.updateParkingSpot(parkingSpot);
         }
