@@ -33,3 +33,13 @@ public class FindParkingSpotAPI {
         return parkingSpotFinder.findParkingSpot();
     }
 }
+
+/*
+
+high levels apis
+
+void sendNotification (Notification notification, List<Channel> channels, User user);
+
+
+
+*/

@@ -3,13 +3,25 @@ package lowLevelDesign.FoodDeliverySystem.data;
 public class FoodItem {
     private final int id;
     private final String name;
-    private final String Description;
-    private final MealType mealType;
-    private final CuisineType cuisineType;
+    private final String description;
     private final StarRating starRating;
-    private final double price;
-    private final int restaurantId;
+    private final CuisineType cuisineType;
+    private final MealType mealType;
+    private final Double priceINR;
+    private final int restaurentId;
     private final boolean isAvailable;
+
+    public FoodItem(int id, String name, String description, StarRating starRating, CuisineType cuisineType, MealType mealType, Double priceINR, int restaurentId, boolean isAvailable) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.starRating = starRating;
+        this.cuisineType = cuisineType;
+        this.mealType = mealType;
+        this.priceINR = priceINR;
+        this.restaurentId = restaurentId;
+        this.isAvailable = isAvailable;
+    }
 
     public int getId() {
         return id;
@@ -20,46 +32,33 @@ public class FoodItem {
     }
 
     public String getDescription() {
-        return Description;
-    }
-
-    public MealType getMealType() {
-        return mealType;
-    }
-
-    public CuisineType getCuisineType() {
-        return cuisineType;
+        return description;
     }
 
     public StarRating getStarRating() {
         return starRating;
     }
 
-    public double getPrice() {
-        return price;
+    public CuisineType getCuisineType() {
+        return cuisineType;
     }
 
-    public int getRestaurantId() {
-        return restaurantId;
+    public MealType getMealType() {
+        return mealType;
+    }
+
+    public Double getPriceINR() {
+        return priceINR;
+    }
+
+    public int getRestaurentId() {
+        return restaurentId;
     }
 
     public boolean isAvailable() {
         return isAvailable;
     }
-
-
-
-
-    // Can be use Builder pattern instead of constructor for better readability and maintainability
-    public FoodItem(int id, String name, String description, MealType mealType, CuisineType cuisineType, StarRating starRating, double price, int restaurantId, boolean isAvailable) {
-        this.id = id;
-        this.name = name;
-        Description = description;
-        this.mealType = mealType;
-        this.cuisineType = cuisineType;
-        this.starRating = starRating;
-        this.price = price;
-        this.restaurantId = restaurantId;
-        this.isAvailable = isAvailable;
-    }
 }
+
+//private List<String> imageUrls;
+// apply builder pattern here

@@ -21,7 +21,7 @@ public class NumberStore {
 
     }
 
-    public int getNumber() {
+    public synchronized int getNumber() {
         return number;
     }
 }

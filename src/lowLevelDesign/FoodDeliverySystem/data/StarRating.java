@@ -1,19 +1,19 @@
 package lowLevelDesign.FoodDeliverySystem.data;
 
 public enum StarRating {
-    ONE_STAR(1),
-    TWO_STAR(2),
-    THREE_STAR(3),
-    FOUR_STAR(4),
-    FIVE_STAR(5);
+    ONE(1),
+    TWO(2),
+    THREE(3),
+    FOUR(4),
+    FIVE(5);
 
-    private final int rating;
+    private int val;
 
-    StarRating(int rating) {
-        this.rating = rating;
+    StarRating(int val) {
+        this.val = val;
     }
 
-    public int getRating() {
-        return rating;
+    public int getVal() {
+        return val;
     }
 }
