@@ -1,14 +1,16 @@
 package concurrency.secondDanger;
 
 public class Main {
-    public static volatile int curr = 1;
+    public static volatile int curr = 0, rounds = 3;
     public static void main(String[] args) {
         Object lock = new Object();
-        Thread thread1 = new Thread(new Worker(1,lock));
-        Thread thread2 = new Thread(new Worker(2,lock));
-        Thread thread3 = new Thread(new Worker(3,lock));
-        Thread thread4 = new Thread(new Worker(4,lock));
-        Thread thread5 = new Thread(new Worker(5,lock));
+        Thread thread0 = new Thread(new Worker(0,lock,rounds));
+        Thread thread1 = new Thread(new Worker(1,lock,rounds));
+        Thread thread2 = new Thread(new Worker(2,lock,rounds));
+        Thread thread3 = new Thread(new Worker(3,lock,rounds));
+        Thread thread4 = new Thread(new Worker(4,lock,rounds));
+        Thread thread5 = new Thread(new Worker(5,lock,rounds));
+        thread0.start();
         thread1.start();
         thread2.start();
         thread3.start();
