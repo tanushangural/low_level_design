@@ -6,7 +6,6 @@ import java.util.Map;
 public class EmployeeIdStore {
     private final Map<String, String> employees;
     private static EmployeeIdStore INSTANCE = null;
-
     private EmployeeIdStore() {
         this.employees = new HashMap<>();
         this.employees.put("101", "Tanush");
